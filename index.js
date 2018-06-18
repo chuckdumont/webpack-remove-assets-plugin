@@ -1,5 +1,6 @@
 /*
- * (C) Copyright IBM Corp. 2012, 2016 All Rights Reserved.
+ * (C) Copyright HCL Technologies Ltd. 2018
+ * (C) Copyright IBM Corp. 2012, 2017 All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+const {tap} = require("webpack-plugin-compat").for("webpack-remove-assets-plugin");
 
 module.exports = class RemoveAssetsPlugin {
 
@@ -22,7 +24,7 @@ module.exports = class RemoveAssetsPlugin {
 
   apply(compiler) {
 
-    compiler.plugin('after-compile', (compilation, callback) => {
+    tap(compiler, 'after-compile', (compilation, callback) => {
       var nDel = 0;
       for (var filename in compilation.assets) {
         if (this.options.regex.test(filename)) {
