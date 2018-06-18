@@ -1,6 +1,6 @@
 {
   "name": "webpack-remove-assets-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "peerDependencies": {
     "webpack": ">= 2.2.0"
   },
@@ -8,5 +8,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chuckdumont/webpack-remove-assets-plugin.git"
+  },
+  "dependencies": {
+    "webpack-plugin-compat": "^1.0.1"
   }
 }
