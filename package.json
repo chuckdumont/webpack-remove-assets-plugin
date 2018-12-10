@@ -1,6 +1,6 @@
 {
   "name": "webpack-remove-assets-plugin",
-  "version": "1.0.1-0",
+  "version": "1.0.1",
   "peerDependencies": {
     "webpack": ">= 2.2.0"
   },
